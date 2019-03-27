@@ -1,21 +1,11 @@
-﻿@{
-    string title = "";
+﻿
+@using Partial_Views_Exercise.Models;
+@{
     string type = (string)ViewData["type"];
-
-    switch (type)
-    {
-        case "transact":
-            title = "Transactions";
-            break;
-
-        case "complain":
-            title = "Complains";
-            break;
-    }
 }
 
-<h2>@title</h2>
 
+<title>@type</title>
 <table>
     <tr>
         <td>@Html.Partial("_UserInfo")</td>
@@ -23,19 +13,21 @@
     </tr>
     <tr>
         @{
+
             if (type == "transact")
             {
-                @: <td colspan="2">
+                @:<td colspan="2">
                     @Html.Partial("_UserTransact")
                 @:</td>
             }
             else if (type == "complain")
             {
-                @: <td colspan="2">
+                @:<td colspan="2">
                     @Html.Partial("_UserComplain")
                 @:</td>
             }
         }
+
     </tr>
 </table>
 
@@ -44,40 +36,3 @@
         padding: 3px;
     }
 </style>
-
-
-@*
-
-    @using Partial_Views_Exercise.Models;
-    <table>
-        <tr>
-            <td>@Html.Partial("_UserInfo")</td>
-            <td>@Html.Partial("_ProfilePic")</td>
-        </tr>
-        <tr>
-            @{
-                string type = (string)ViewData["type"];
-                if (type =="transact")
-                {
-                    @:<td colspan="2">
-                        @Html.Partial("_UserTransact")
-                    @:</td>
-                }
-                else if (type =="complain")
-                {
-                    @:<td colspan="2">
-                        @Html.Partial("_UserComplain")
-                    @:</td>
-                }
-            }
-
-        </tr>
-    </table>
-
-    <style>
-        th, td {
-            padding: 3px;
-        }
-    </style>
-
-*@
