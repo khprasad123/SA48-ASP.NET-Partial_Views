@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Partial_Views Exercise", "Partial_Views Exercise\Partial_Views Exercise.csproj", "{020E1086-1971-4927-B8A4-6B317B611576}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Partial_Views_Exercise", "Partial_Views Exercise\Partial_Views_Exercise.csproj", "{020E1086-1971-4927-B8A4-6B317B611576}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

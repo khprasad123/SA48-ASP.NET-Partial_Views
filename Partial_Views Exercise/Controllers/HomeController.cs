@@ -27,8 +27,8 @@ namespace Partial_Views_Exercise.Controllers
 
             return View();
         }
-
-        public ActionResult PartialViews(string choice)
+        [Route("Partial")]
+        public ActionResult GetPartialView(string choice)
         {
             UserModel user  = new UserModel("Harirpasad","khprasad123@gmail.com");
             ViewData["user"] = user;

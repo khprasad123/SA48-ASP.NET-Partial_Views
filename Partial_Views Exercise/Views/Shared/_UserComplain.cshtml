@@ -1,0 +1,19 @@
+﻿@model Partial_Views_Exercise.Models.ComplaintModels
+@using Partial_Views_Exercise.Models;
+
+<table>
+    <tr>
+        <th>Product</th><th>Complaint</th>
+    </tr>
+    
+    @{ 
+        List<ComplaintModels> list = (List<ComplaintModels>)ViewData["complain"];
+        foreach(var i in list)
+        {
+            <tr>
+                <td>@i.product</td>
+                <td>@i.complain</td>
+            </tr>
+        }
+    }
+</table>
